@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { buttonVariants } from "../ui/button";
 export function Navbar(){
     return<>
     <nav className="w-full py-5 flex items-center justify-between">
@@ -15,8 +16,8 @@ export function Navbar(){
             </div>
         </div>
         <div className="flex items-center gap-2">
-            <Link href="/auth/sign-up">Sign up</Link>
-            <Link href="/auth/login">Login</Link>
+            <Link className={buttonVariants()} href="/auth/sign-up">Sign up</Link>
+            <Link className={buttonVariants()} href="/auth/login">Login</Link>
         </div>
 
     </nav>
