@@ -4,6 +4,7 @@ import "./globals.css";
 import { Navbar } from "@/components/web/Navbar";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/ui/theme-provider";
+import { ConvexClientProvider } from "@/components/web/ConvexClientProvider";
 
 const inter = Inter({subsets:['latin'],variable:'--font-sans'});
 
@@ -44,7 +45,7 @@ export default function RootLayout({
         <main className=" mx-auto w-full px-4 md:px-6 lg:px-8">
 
        
-        {children}
+       <ConvexClientProvider>{children}</ConvexClientProvider>
         </main>
         </ThemeProvider>
         </body>

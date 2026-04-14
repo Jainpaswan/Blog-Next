@@ -5,7 +5,7 @@ import { Controller, useForm } from "react-hook-form";
 import { SignUpSchema } from "@/app/schemas/auth";
 import { Field, FieldError, FieldGroup, FieldLabel } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 
 export default function SignUpPage(){
 
@@ -60,7 +60,7 @@ export default function SignUpPage(){
                     )}>
 
                     </Controller>
-                    <Button>Sign Up</Button>
+                    <Button  className={buttonVariants ({ variant: "ghost" })}>Sign Up</Button>
 
                 </FieldGroup>
             </form>
